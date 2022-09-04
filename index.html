@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <title>Clock</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="time-outline.svg" >
+    <link rel="shortcut icon" href="time-outline.svg">
 </head>
 
-<body>
+<body class="body">
     <div class="clock">
         <div class="hour">
             <div class="hr" id="hr"></div>
@@ -20,27 +20,10 @@
             <div class="sc" id="sc"></div>
         </div>
     </div>
-    <script type="text/javascript">
-        const deg = 6;
-        const hr = document.querySelector('#hr');
-        const mn = document.querySelector('#mn');
-        const sc = document.querySelector('#sc');
-
-
-        setInterval(() => {
-            let day = new Date();
-            let hh = day.getHours() * 30;
-            let mm = day.getMinutes() * deg;
-            let ss = day.getSeconds() * deg;
-
-            hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
-            mn.style.transform = `rotateZ(${mm}deg)`;
-            sc.style.transform = `rotateZ(${ss}deg)`;
-        }
-        )
-
-
-    </script>
+    <span>
+        <div class="dw"></div>
+    </span>
+    <script src="script.js"></script>
 </body>
 
 </html>
